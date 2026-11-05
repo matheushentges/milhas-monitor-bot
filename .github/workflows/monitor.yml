@@ -32,11 +32,14 @@ jobs:
           pip install -r requirements.txt
 
       - name: Executar testes de integridade
+        env:
+          PYTHONPATH: .
         run: |
-          pytest
+          python -m pytest
 
       - name: Executar bot de monitoramento
         env:
+          PYTHONPATH: .
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
