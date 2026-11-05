@@ -1,0 +1,24 @@
+# Configurações do Bot de Monitoramento de Milhas
+
+# Bancos monitorados:
+# Use ["all"] para monitorar todos os bancos, ou especifique os que você possui:
+# Exemplos: ["sicredi", "livelo", "esfera", "itau", "bradesco", "bb", "c6", "inter"]
+banks:
+  - all
+
+# Percentual mínimo de bônus para disparar alerta (ex: 0 para todas as promoções, 50 para pelo menos 50% de bônus):
+min_bonus_percentage: 0
+
+# Feeds RSS para monitorar
+feeds:
+  - name: "Melhores Destinos"
+    url: "https://www.melhoresdestinos.com.br/feed"
+  - name: "Passageiro de Primeira"
+    url: "https://passageirodeprimeira.com/feed/"
+  - name: "Pontos pra Voar"
+    url: "https://pontospravoar.com/feed/"
+
+# Scrapers Diretos ativados
+direct_scrapers:
+  smiles: true
+  azul: true
